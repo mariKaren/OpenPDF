@@ -1,13 +1,19 @@
-import './App.css'
+import 'remixicon/fonts/remixicon.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AppLayout from "./layout/AppLayout";
+import Home from "./pages/Home";
 
 function App() {
+
   return (
-    <>
-      <div>
-        <h1>OpenPDF</h1>
-      </div>
-    </>
-  )
+    <BrowserRouter>
+      <AppLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </AppLayout>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
